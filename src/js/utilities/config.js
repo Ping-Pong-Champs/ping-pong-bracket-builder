@@ -15,7 +15,7 @@ function config($stateProvider, $urlRouterProvider) {
 
   .state('root.add-account', {
     url: '/add-account',
-    templateUrl: 'templates/',
+    templateUrl: 'templates/addAccount.tpl.html',
     controller: 'AddAccountController as vm'
   })
 
