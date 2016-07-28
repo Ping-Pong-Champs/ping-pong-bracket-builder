@@ -13,6 +13,12 @@ function config($stateProvider, $urlRouterProvider) {
     controller: 'SignupController as vm'
   })
 
+  .state('root.add-account', {
+    url: '/add-account',
+    templateUrl: 'templates/'
+    controller: 'AddAccountController as vm'
+  })
+
 
 
   $urlRouterProvider.otherwise('/sign-in');
