@@ -6,6 +6,7 @@ function SignupController(UserService, $state) {
   function loginUser(user){
     UserService.login(user).then(function(res){
       console.log(res);
+      $state.go('root.tournaments');
     })
   }
 
