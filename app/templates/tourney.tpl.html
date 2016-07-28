@@ -1,0 +1,39 @@
+<div class="tourneyViewContainer">
+	<h2 class="tourneyHeader">Tournaments</h2>
+	<div class="createButtonContainer">
+		<div class="createButton" ng-click="showDropdown()">
+			Create New Tournament
+		</div>
+	</div>
+	<div class="createFormContainer" ng-show="tourneyCreateShow(vm.tourney)">
+		<form>
+			<div class="tourneyViewInput">
+				<p class="tourneyViewInputText">Tournament Name:</p>
+				<input type="text" ng-model="vm.tourney.name" required>
+			</div>
+			<div class="tourneyViewInput">
+				<p class="tourneyViewInputText">Tournament Location:</p>
+				<input type="text" ng-model="vm.tourney.location" required>
+			</div>
+			<div class="tourneyViewInput">
+				<p class="tourneyViewInputText">Tournament Date and Time:</p>
+				<input type="datetime-local" ng-model="vm.tourney.datetime" required>
+			</div>
+			<div class="tourneyViewInput">
+				<p class="tourneyViewInputText">Tournament Location:</p>
+				<input type="text" ng-model="vm.tourney.location" required>
+			</div>
+			<div class="tourneyViewInput">
+				<p class="tourneyViewInputText">Number of Players:</p>
+				<input type="text" ng-model="vm.tourney.size" required>
+			</div>
+			<div class="tourneyViewInput">
+				<p class="tourneyViewInputText">Registration Deadline:</p>
+				<input type="datetime-local" ng-model="vm.tourney.deadline" required>
+			</div>
+			<div class="tourneyViewInput">
+				<input type="submit" class="tourneyViewSubmitButton">
+			</div>
+		</form>
+	</div>
+</div>
