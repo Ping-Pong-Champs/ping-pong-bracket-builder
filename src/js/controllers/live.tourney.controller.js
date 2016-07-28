@@ -1,7 +1,7 @@
-function LiveTourney() {
+function LiveTourneyController() {
 
 }
 
-LiveTourney.$inject = [];
+LiveTourneyController.$inject = [];
 
-export { LiveTourney };
+export { LiveTourneyController };
