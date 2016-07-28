@@ -1,10 +1,12 @@
 <div class="addAccountContainer">
 	<h2 class="addAccountTitle"> Add Account </h2>
 	<form id="addAccountForm">
-		<input type="email" class="emailInput" placeholder="Email">
-		<input type="password" class="passwordInput" placeholder="Password">
-		<input type="text" class="usernameInput" placeholder="Username">
-		<input type="text" class="location" placeholder="Location (city, state)">
+		<input type="text" class="firstNameInput" placeholder="First Name" ng-model="user.first_name">
+		<input type="text" class="lastNameInput" placeholder="Last Name" ng-model="user.last_name">
+		<input type="email" class="emailInput" placeholder="Email" ng-model="user.email">
+		<input type="password" class="passwordInput" placeholder="Password" ng-model="user.username">
+		<input type="text" class="usernameInput" placeholder="Username" ng-model="user.username">
+		<input type="text" class="location" placeholder="Location (city, state)" ng-model="user.location">
 		<input type="submit" class="addAccountSubmit">
 	</form>
 </div>

@@ -15,6 +15,7 @@ import { LayoutController } from './controllers/layout.controller';
 import { SignupController } from './controllers/signup.controller';
 
 //import our services
+import { UserService } from './services/user.service';
 
 angular
 	.module('app', ['ui.router'])
