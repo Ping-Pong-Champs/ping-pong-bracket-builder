@@ -1,5 +1,6 @@
 import angular from 'angular';
 import 'angular-ui-router';
+import 'angular-cookies'
 
 //import our server
 import { SERVER } from './utilities/server'
@@ -19,7 +20,7 @@ import { AddAccountController } from './controllers/add.account.controller';
 import { UserService } from './services/user.service';
 
 angular
-	.module('app', ['ui.router'])
+	.module('app', ['ui.router', 'ngCookies'])
 	.config(config)
 	.controller('LayoutController', LayoutController)
 	.controller('SignupController', SignupController)
