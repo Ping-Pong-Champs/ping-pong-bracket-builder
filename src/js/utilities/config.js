@@ -22,7 +22,7 @@ function config($stateProvider, $urlRouterProvider) {
   .state('root.tournaments', {
     url: '/tournaments',
     templateUrl: 'templates/tourney.tpl.html',
-    controller: 'TourneyViewController as vm'
+    controller: 'TourneyController as vm'
   })
 
   .state('root.live-tourney', {
