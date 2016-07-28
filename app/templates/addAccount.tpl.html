@@ -1,12 +1,11 @@
 <div class="addAccountContainer">
 	<h1 class="addAccountTitle">Add Account</h1><br />
 	<form id="addAccountForm" class="addAccountForm" ng-submit="vm.createUser(user)">
-		<input type="text" class="firstNameInput add_input" placeholder="First Name" ng-model="user.first_name"><br />
-		<input type="text" class="lastNameInput add_input" placeholder="Last Name" ng-model="user.last_name"><br />
-		<input type="email" class="emailInput add_input" placeholder="Email" ng-model="user.email"><br />
-		<input type="password" class="passwordInput add_input" placeholder="Password" ng-model="user.password"><br />
-		<input type="text" class="usernameInput add_input" placeholder="Username" ng-model="user.username"><br />
-		<input type="text" class="location add_input" placeholder="Location (city, state)" ng-model="user.location"><br />
+		<input type="text" class="firstNameInput add_input" placeholder="First Name" ng-model="user.first_name" required><br />
+		<input type="text" class="lastNameInput add_input" placeholder="Last Name" ng-model="user.last_name" required><br />
+		<input type="email" class="emailInput add_input" placeholder="Email" ng-model="user.email" required><br />
+		<input type="password" class="passwordInput add_input" placeholder="Password" ng-model="user.password" required><br />
+		<input type="text" class="usernameInput add_input" placeholder="Username" name="username" ng-model="user.username" required><br />
 		<input type="submit" class="addAccountSubmit">
 	</form>
 </div>
