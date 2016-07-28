@@ -1,0 +1,72 @@
+html{
+  width: 100%;
+  height: 100%;
+  body{
+    width: 100%;
+    height: 100%
+  }
+}
+
+
+.container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .navbar{
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    .link{
+      margin: 0px 10px;
+      text-decoration: none;
+    }
+    .sign-in_link{
+      border: none;
+    }
+  }
+
+
+  .sign-up_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    form{
+      width: 100%;
+      .input_box{
+        .placeholder{
+
+        }
+        .input{
+          width: 25%;
+          margin-bottom: 20px;
+        }
+      }
+      .sign-in_button{
+        margin-bottom: 10px;
+        border: none;
+      }
+      .or{
+
+      }
+      .create-account_button{
+        margin-top: 10px;
+        border: none;
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
