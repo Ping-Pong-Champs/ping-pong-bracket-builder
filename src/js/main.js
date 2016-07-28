@@ -16,7 +16,7 @@ import { LayoutController } from './controllers/layout.controller';
 import { SignupController } from './controllers/signup.controller';
 import { AddAccountController } from './controllers/add.account.controller';
 import { TourneyController } from './controllers/tourney.controller';
-import { LiveTourney } from './controllers/live.tourney.controller';
+import { LiveTourneyController } from './controllers/live.tourney.controller';
 
 //import our services
 import { UserService } from './services/user.service';
@@ -28,7 +28,7 @@ angular
 	.controller('SignupController', SignupController)
 	.controller('AddAccountController', AddAccountController)
 	.controller('TourneyController', TourneyController)
-	.controller('LiveTourney', LiveTourney)
+	.controller('LiveTourneyController', LiveTourneyController)
 	.service('UserService', UserService)
 	.constant ('SERVER', SERVER)
 ;
