@@ -15,6 +15,7 @@ import { config } from './utilities/config';
 import { LayoutController } from './controllers/layout.controller';
 import { SignupController } from './controllers/signup.controller';
 import { AddAccountController } from './controllers/add.account.controller';
+import { LiveTourney } from './controllers/live.tourney.controller';
 
 //import our services
 import { UserService } from './services/user.service';
@@ -25,6 +26,7 @@ angular
 	.controller('LayoutController', LayoutController)
 	.controller('SignupController', SignupController)
 	.controller('AddAccountController', AddAccountController)
+	.controller('LiveTourney', LiveTourney)
 	.service('UserService', UserService)
 	.constant ('SERVER', SERVER)
 ;
