@@ -1,4 +1,4 @@
-function UserService (SERVER, $http, cookies) {
+function UserService (SERVER, $http, $cookies) {
 
 	this.signup = signup;
 	this.login = login;
@@ -36,5 +36,5 @@ function UserService (SERVER, $http, cookies) {
 
 }
 
-UserService.$inject = ['SERVER', '$http', 'cookies'];
+UserService.$inject = ['SERVER', '$http', '$cookies'];
 export { UserService };
