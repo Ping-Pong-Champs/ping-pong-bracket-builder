@@ -1,0 +1,10 @@
+<div class="addAccountContainer">
+	<h2 class="addAccountTitle"> Add Account </h2>
+	<form id="addAccountForm">
+		<input type="email" class="emailInput" placeholder="Email">
+		<input type="password" class="passwordInput" placeholder="Password">
+		<input type="text" class="usernameInput" placeholder="Username">
+		<input type="text" class="location" placeholder="Location (city, state)">
+		<input type="submit" class="addAccountSubmit">
+	</form>
+</div>

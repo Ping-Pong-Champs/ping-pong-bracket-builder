@@ -2,6 +2,9 @@ import angular from 'angular';
 import 'angular-ui-router';
 
 //import our server
+import { SERVER } from './utilities/server'
+
+//import our config
 
 //import our constants
 import { config } from './utilities/config';
@@ -18,4 +21,5 @@ angular
 	.config(config)
 	.controller('LayoutController', LayoutController)
 	.controller('SignupController', SignupController)
+	.constant ('SERVER', SERVER)
 ;
