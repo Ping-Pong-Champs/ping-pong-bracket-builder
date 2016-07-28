@@ -19,20 +19,115 @@
 				<input type="text" ng-model="vm.tourney.location" required>
 			</div>
 			<div class="tourneyViewInput">
-				<p class="tourneyViewInputText">Tournament Date and Time:</p>
-				<input type="datetime-local" ng-model="vm.tourney.datetime" required>
+				<p class="tourneyViewInputText">Tournament Start Date and Time:</p>
+				<input type="datetime-local" ng-model="vm.tourney.starting_at" required>
 			</div>
 			<div class="tourneyViewInput">
-				<p class="tourneyViewInputText">Tournament Location:</p>
-				<input type="text" ng-model="vm.tourney.location" required>
-			</div>
-			<div class="tourneyViewInput">
-				<p class="tourneyViewInputText">Number of Players:</p>
+				<p class="tourneyViewInputText">Tournament Size:</p>
 				<select ng-model="vm.tourney.size" required>
 					<option value="8">8 Players</option>
 					<option value="16">16 Players</option>
-					<option value="32">32 Players</option>
 				</select>
+				<div class="eightPlayerInputs playerInputs" ng-show="vm.tourney.size == 8">
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 1 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player1">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 2 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player2">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 3 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player3">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 4 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player4">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 5 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player5">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 6 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player6">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 7 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player7">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 8 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player8">
+					</div>																	
+				</div>
+				<div class="sixteenPlayerInputs playerInputs" ng-show="vm.tourney.size == 16">
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 1 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player1">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 2 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player2">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 3 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player3">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 4 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player4">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 5 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player5">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 6 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player6">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 7 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player7">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 8 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player8">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 9 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player9">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 10 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player10">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 11 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player11">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 12 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player12">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 13 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player13">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 14 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player14">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 15 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player15">
+					</div>
+					<div class="playerInputContainer">
+						<p class="tourneyViewInputText">Player 16 Nickname:</p>
+						<input type="text" placeholder="Player Nickname" ng-model="vm.tourney.players.player16">
+					</div>
+				</div>			
 			</div>
 			<div class="tourneyViewInput">
 				<p class="tourneyViewInputText">Registration Deadline:</p>
@@ -41,6 +136,28 @@
 			<div class="tourneyViewInput">
 				<input type="submit" class="tourneyViewSubmitButton">
 			</div>
-		</form>
+		</form>								
+	</div>
+	<div class="tourneysContainer" >
+		<div class="tourneyContainer">
+			<div class="tourneyName tourneyData">
+				{{tournament.title}}
+			</div>
+			<div class="tourneyLocation tourneyData">
+				{{tournament.location}}
+			</div>
+			<div class="tourneyStatingAt tourneyData">
+				{{tournament.starting_at}}
+			</div>
+			<div class="tourneySize tourneyData">
+				{{tournament.size}}
+			</div>
+			<div class="tourneyDeadline tourneyData">
+				{{tournament.deadline}}
+			</div>
+			<div class="tournamentOrganizer tourneyData">
+				{{tournament.organizer}}
+			</div>
+		</div>
 	</div>
 </div>

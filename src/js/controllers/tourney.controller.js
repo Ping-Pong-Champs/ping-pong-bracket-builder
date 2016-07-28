@@ -7,6 +7,7 @@ function TourneyController ( $state) {
 	vm.tourney = {
 		createTourney: false
 	};
+
 	vm.tourneys = [];
 
 	function init (){
@@ -18,12 +19,10 @@ function TourneyController ( $state) {
 
 	function tourneyCreateShow(tourney){
 		vm.tourney.createTourney = true;
-		console.log(vm.tourney);
 	}
 
 	function tourneyCreateHide(tourney){
 		vm.tourney.createTourney = false;
-		console.log(vm.tourney);
 	}
 
 	function createTourney(tourney){
