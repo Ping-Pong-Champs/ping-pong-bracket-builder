@@ -25,9 +25,13 @@ function config($stateProvider, $urlRouterProvider) {
     controller: 'TourneyViewController as vm'
   })
 
+  .state('root.live-tourney', {
+    url: '/live-tourney',
+    templateUrl: 'templates/liveTourney.tpl.html',
+    controller: 'LiveTourney as vm'
+  })
 
   $urlRouterProvider.otherwise('/sign-in');
-
 
 }
 
