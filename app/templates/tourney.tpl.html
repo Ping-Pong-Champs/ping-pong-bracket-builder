@@ -1,12 +1,15 @@
 <div class="tourneyViewContainer">
 	<h2 class="tourneyHeader">Tournaments</h2>
 	<div class="createButtonContainer">
-		<div class="createButton" ng-click="showDropdown()">
+		<div class="createButton" ng-click="vm.tourneyCreateShow(vm.tourney)">
 			Create New Tournament
 		</div>
 	</div>
-	<div class="createFormContainer" ng-show="tourneyCreateShow(vm.tourney)">
-		<form>
+	<div class="createFormContainer" ng-show="vm.tourney.createTourney">
+		<div class="cancelButton" ng-click="vm.tourneyCreateHide(vm.tourney)">
+		Cancel
+		</div>
+		<form ng-submit="vm.createTourney(vm.tourney)">
 			<div class="tourneyViewInput">
 				<p class="tourneyViewInputText">Tournament Name:</p>
 				<input type="text" ng-model="vm.tourney.name" required>
@@ -25,7 +28,11 @@
 			</div>
 			<div class="tourneyViewInput">
 				<p class="tourneyViewInputText">Number of Players:</p>
-				<input type="text" ng-model="vm.tourney.size" required>
+				<select ng-model="vm.tourney.size" required>
+					<option value="8">8 Players</option>
+					<option value="16">16 Players</option>
+					<option value="32">32 Players</option>
+				</select>
 			</div>
 			<div class="tourneyViewInput">
 				<p class="tourneyViewInputText">Registration Deadline:</p>

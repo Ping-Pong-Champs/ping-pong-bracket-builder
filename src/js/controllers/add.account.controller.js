@@ -5,7 +5,7 @@ function AddAccountController (UserService, $state){
 
   function createUser (user) {
     UserService.signup(user).then( res => {
-      console.log(res);
+      $state.go('root.tournaments');
     });
   }
 
