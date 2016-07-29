@@ -1,18 +1,24 @@
-function SignupController(UserService, $state) {
+function SignupController (UserService, $cookies, $state) {
 
   let vm = this;
   vm.loginUser = loginUser;
 
-  function loginUser(user){
-    UserService.login(user).then(function(res){
-      console.log(res);
-      $state.go('root.tournaments');
-    })
+  function loginUser (user) {
+    UserService.login(user).then( 
+      // Successful Response
+      res => {
+        $cookies.put('access_token', res.data.access_token);
+        $cookies.put('username', res.data.username);
+        $state.go('root.tournaments');
+      }, 
+      // Error Response (Client Error)
+      error => {
+        console.log(error.data.errors);
+      }
+    );
   }
-
 
 }
 
-SignupController.$inject = ['UserService', '$state'];
-
+SignupController.$inject = ['UserService', '$cookies', '$state'];
 export { SignupController };
