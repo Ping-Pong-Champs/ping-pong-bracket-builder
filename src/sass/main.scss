@@ -27,22 +27,6 @@ html{
     top: 0px;
     left: 0px;
     z-index: 1;
-    .logo{
-      position: absolute;
-      left: 7%;
-      width: 6%;
-      height: 90%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .logo-img{
-        width: 100%;
-        height: 80%;
-      }
-      .logo-title{
-        color: white;
-        font-size: 30px;
-      }
     }
     .links{
       display: flex;
@@ -87,13 +71,14 @@ html{
   }
 
   .logo{
-    position: absolute;
-    bottom: 85%;
-    width: 100%;
+    // height: 100px;
+    // width: 100px;
+    // background-image: url("./../images/pingpong-logo.png");
     .logo-img{
 
     }
     .title{
+
 
     }
   }
@@ -918,11 +903,6 @@ html{
     }
   }
 
-
-}
-
-
-
 .liveHeader{
   display: flex;
   position: relative;
@@ -949,4 +929,8 @@ html{
 
 .player {
   color: white;
+}
+
+.pongPhoto{
+  width: 30%;
 }
