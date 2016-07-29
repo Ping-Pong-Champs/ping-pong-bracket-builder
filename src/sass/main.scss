@@ -1,3 +1,5 @@
+
+
 html{
   width: 100%;
   height: 100%;
@@ -11,13 +13,13 @@ html{
 .container{
   width: 100%;
   height: 100%;
-  min-width: 800px;
-  min-height: 500px;
+  // min-width: 800px;
+  // min-height: 500px;
   position: relative;
   .navbar{
     width: 100%;
     height: 10%;
-    background-color: black;
+    background-color: #01579B;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,9 +29,20 @@ html{
     z-index: 1;
     .logo{
       position: absolute;
-      left: 5%;
-      width: 15%;
+      left: 7%;
+      width: 6%;
       height: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .logo-img{
+        width: 100%;
+        height: 80%;
+      }
+      .logo-title{
+        color: white;
+        font-size: 30px;
+      }
     }
     .links{
       display: flex;
@@ -40,6 +53,12 @@ html{
       .link{
         margin: 0px 10px;
         text-decoration: none;
+        color: white;
+        transition: color .2s ease-in-out;
+      }
+      .link:hover{
+        color: #C62828;
+        transition: color .2s ease-in-out;
       }
       .create-account_button{
         border: none;
@@ -59,29 +78,36 @@ html{
     top: 10%;
     form{
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .input_box{
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 20px 10px;
+        width: 25%;
         .placeholder{
 
         }
         .input{
-          width: 25%;
+          width: 80%;
           margin-bottom: 20px;
           padding: 5px;
         }
-      }
-      .sign-in_button{
-        margin-bottom: 10px;
-        border: none;
-      }
-      .or{
-
-      }
-      .create-account_button{
-        margin-top: 10px;
-        border: none;
-        a{
-          text-decoration: none;
+        .sign-in_button{
+          margin-bottom: 10px;
+          border: none;
         }
+        .or{
+
+        }
+        .create-account_button{
+          margin-top: 10px;
+          border: none;
+          a{
+            text-decoration: none;
+          }
+      }
       }
     }
   }
@@ -108,6 +134,50 @@ html{
     }
   }
 
+
+
+.tourneyViewContainer{
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  .tourneyHeader{
+  }
+  .createButtonContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .createButton{
+      width: 10%;
+      height: 10%;
+      background: #01579B;
+      color: white;
+      padding: 1%;
+    }
+  }
+  .createFormContainer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    .cancelButton{
+      width: 10%;
+      height: 10%;
+      background: #C62828;
+      color: white;
+      padding: 1%;
+    }
+    form{
+      width: 95%;
+      .tourneyViewInput{
+        .tourneyViewInputText{
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
 
   .liveTourneyView{
     width: 100%;
@@ -724,25 +794,12 @@ html{
 
 
 
+
 }
 
-.createButton {
-  width: 10%;
-  height: 10%;
-  background: purple;
-  color: white;
-}
 
-.cancelButton {
-  width: 10%;
-  height: 10%;
-  background: gray;
-  color: white;
-}
 
-.tourneyViewInputText{
-  margin-bottom: 5px;
-}
+
 
 .playerInputs{
   display: flex;
