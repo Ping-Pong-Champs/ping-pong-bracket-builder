@@ -6,6 +6,7 @@ function TourneyService ($cookies, $http, SERVER, UserService) {
   this.createPlayer = createPlayer;
   this.addPlayerInTourney = addPlayerInTourney;
   this.getPlayerByNickname = getPlayerByNickname;
+  this.seedTourney = seedTourney;
 
 
   function postTourney (tourney) {
