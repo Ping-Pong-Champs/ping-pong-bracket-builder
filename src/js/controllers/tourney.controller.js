@@ -10,6 +10,7 @@ function TourneyController (UserService, $state, TourneyService, $rootScope) {
 	};
 	vm.players = {};
 	vm.tourneys = [];
+	vm.validSize = validSize;
 
 
   init();
@@ -26,6 +27,10 @@ function TourneyController (UserService, $state, TourneyService, $rootScope) {
 			console.log(vm.tourneys);
   	});
   };
+
+	function validSize(tournament) {
+		return tournament.size === 8 || tournament.size === 16;
+	}
 
 	function tourneyCreateShow(tourney){
 		vm.tourneyShowObj.createTourney = true;
