@@ -6,8 +6,6 @@ import 'angular-cookies'
 import { SERVER } from './utilities/server'
 
 //import our config
-
-//import our constants
 import { config } from './utilities/config';
 
 
@@ -20,6 +18,7 @@ import { LiveTourneyController } from './controllers/live.tourney.controller';
 
 //import our services
 import { UserService } from './services/user.service';
+import { TourneyService } from './services/tourney.service';
 
 angular
 	.module('app', ['ui.router', 'ngCookies'])
@@ -30,5 +29,6 @@ angular
 	.controller('TourneyController', TourneyController)
 	.controller('LiveTourneyController', LiveTourneyController)
 	.service('UserService', UserService)
+	.service('TourneyService', TourneyService)
 	.constant ('SERVER', SERVER)
 ;
