@@ -1,6 +1,6 @@
 <div class="liveTourneyView">
   <div class="liveHeader">
-    <div class="addPlayerContainer">
+    <div class="addPlayerContainer" ng-hide="vm.players.length >= vm.tourney.size">
       <form class="addPlayerForm" ng-submit="vm.addPlayer(player, vm.tourney)">
         <p class="playerInputText">Add Player</p>
         <p class="playerInputText">Full Name:</p>
@@ -12,11 +12,14 @@
     </div>
     <div class="playerListContainer">
       <p class="player" >Players:</p>
-      <div class="playersListBox" ng-repeat="player in vm.players">      
+      <div class="playersListBox" ng-repeat="player in vm.players">
         <p class="player">
           {{player.nickname}}
         </p>
       </div>
+    </div>
+    <div class="startButton" ng-show="vm.players.length >= vm.tourney.size">
+     <button class="start-game" ng-click="vm.seedBracket()">Start</button>
     </div>
   </div>
 
@@ -25,22 +28,22 @@
       <div class="matchOne">
 
       </div>
-      <span class="playerOne"></span>
-      <span class="playerTwo"></span>
+      <span class="playerOne">{{ vm.tourney.matches[0].player1.nickname }}</span>
+      <span class="playerTwo">{{ vm.tourney.matches[0].player2.nickname }}</span>
       <div class="matchTwo">
 
       </div>
-      <span class="playerThree"></span>
-      <span class="playerFour"></span>
+      <span class="playerThree">{{ vm.tourney.matches[1].player1.nickname }}</span>
+      <span class="playerFour">{{ vm.tourney.matches[1].player2.nickname }}</span>
       <div class="matchThree">
 
       </div>
-      <span class="matchOneWinner"></span>
-      <span class="matchTwoWinner"></span>
+      <span class="matchOneWinner">{{ vm.tourney.matches[4].player1.nickname }}</span>
+      <span class="matchTwoWinner">{{ vm.tourney.matches[4].player2.nickname }}</span>
       <div class="sideWinner">
 
       </div>
-      <span class="matchThreeWinner"></span>
+      <span class="matchThreeWinner">{{ vm.tourney.matches[6].player1.nickname }}</span>
     </div>
     <div class="winner">
       <div class="tourneyWinner">
@@ -52,22 +55,22 @@
       <div class="matchOne">
 
       </div>
-      <span class="playerOne"></span>
-      <span class="playerTwo"></span>
+      <span class="playerOne">{{ vm.tourney.matches[2].player1.nickname }}</span>
+      <span class="playerTwo">{{ vm.tourney.matches[2].player2.nickname }}</span>
       <div class="matchTwo">
 
       </div>
-      <span class="playerThree"></span>
-      <span class="playerFour"></span>
+      <span class="playerThree">{{ vm.tourney.matches[3].player1.nickname }}</span>
+      <span class="playerFour">{{ vm.tourney.matches[3].player2.nickname }}</span>
       <div class="matchThree">
 
       </div>
-      <span class="matchOneWinner"></span>
-      <span class="matchTwoWinner"></span>
+      <span class="matchOneWinner">{{ vm.tourney.matches[5].player1.nickname }}</span>
+      <span class="matchTwoWinner">{{ vm.tourney.matches[5].player2.nickname }}</span>
       <div class="sideWinner">
 
       </div>
-      <span class="matchThreeWinner"></span>
+      <span class="matchThreeWinner">{{ vm.tourney.matches[6].player2.nickname }}</span>
     </div>
   </div>
 
@@ -77,42 +80,42 @@
       <div class="matchOne">
 
       </div>
-      <span class="playerOne"></span>
-      <span class="playerTwo"></span>
+      <span class="playerOne">{{ vm.tourney.matches[0].player1.nickname }}</span>
+      <span class="playerTwo">{{ vm.tourney.matches[0].player2.nickname }}</span>
       <div class="matchTwo">
 
       </div>
-      <span class="playerThree"></span>
-      <span class="playerFour"></span>
+      <span class="playerThree">{{ vm.tourney.matches[1].player1.nickname }}</span>
+      <span class="playerFour">{{ vm.tourney.matches[1].player2.nickname }}</span>
       <div class="matchThree">
 
       </div>
-      <span class="playerFive"></span>
-      <span class="playerSix"></span>
+      <span class="playerFive">{{ vm.tourney.matches[2].player1.nickname }}</span>
+      <span class="playerSix">{{ vm.tourney.matches[2].player2.nickname }}</span>
       <div class="matchFour">
 
       </div>
-      <span class="playerSeven"></span>
-      <span class="playerEight"></span>
+      <span class="playerSeven">{{ vm.tourney.matches[3].player1.nickname }}</span>
+      <span class="playerEight">{{ vm.tourney.matches[3].player2.nickname }}</span>
       <div class="matchFive">
 
       </div>
-      <span class="matchOneWinner"></span>
-      <span class="matchTwoWinner"></span>
+      <span class="matchOneWinner">{{ vm.tourney.matches[8].player1.nickname }}</span>
+      <span class="matchTwoWinner">{{ vm.tourney.matches[8].player2.nickname }}</span>
       <div class="matchSix">
 
       </div>
-      <span class="matchThreeWinner"></span>
-      <span class="matchFourWinner"></span>
+      <span class="matchThreeWinner">{{ vm.tourney.matches[9].player1.nickname }}</span>
+      <span class="matchFourWinner">{{ vm.tourney.matches[9].player2.nickname }}</span>
       <div class="matchSeven">
 
       </div>
-      <span class="matchFiveWinner"></span>
-      <span class="matchSixWinner"></span>
+      <span class="matchFiveWinner">{{ vm.tourney.matches[10].player1.nickname }}</span>
+      <span class="matchSixWinner">{{ vm.tourney.matches[10].player2.nickname }}</span>
       <div class="sideWinner">
 
       </div>
-      <span class="matchSevenWinner"></span>
+      <span class="matchSevenWinner">{{ vm.tourney.matches[14].player1.nickname }}</span>
     </div>
     <div class="winner">
       <div class="tourneyWinner">
@@ -124,42 +127,42 @@
       <div class="matchOne">
 
       </div>
-      <span class="playerOne"></span>
-      <span class="playerTwo"></span>
+      <span class="playerOne">{{ vm.tourney.matches[4].player1.nickname }}</span>
+      <span class="playerTwo">{{ vm.tourney.matches[4].player2.nickname }}</span>
       <div class="matchTwo">
 
       </div>
-      <span class="playerThree"></span>
-      <span class="playerFour"></span>
+      <span class="playerThree">{{ vm.tourney.matches[5].player1.nickname }}</span>
+      <span class="playerFour">{{ vm.tourney.matches[5].player2.nickname }}</span>
       <div class="matchThree">
 
       </div>
-      <span class="playerFive"></span>
-      <span class="playerSix"></span>
+      <span class="playerFive">{{ vm.tourney.matches[6].player1.nickname }}</span>
+      <span class="playerSix">{{ vm.tourney.matches[6].player2.nickname }}</span>
       <div class="matchFour">
 
       </div>
-      <span class="playerSeven"></span>
-      <span class="playerEight"></span>
+      <span class="playerSeven">{{ vm.tourney.matches[7].player1.nickname }}</span>
+      <span class="playerEight">{{ vm.tourney.matches[7].player2.nickname }}</span>
       <div class="matchFive">
 
       </div>
-      <span class="matchOneWinner"></span>
-      <span class="matchTwoWinner"></span>
+      <span class="matchOneWinner">{{ vm.tourney.matches[11].player1.nickname }}</span>
+      <span class="matchTwoWinner">{{ vm.tourney.matches[11].player2.nickname }}</span>
       <div class="matchSix">
 
       </div>
-      <span class="matchThreeWinner"></span>
-      <span class="matchFourWinner"></span>
+      <span class="matchThreeWinner">{{ vm.tourney.matches[12].player1.nickname }}</span>
+      <span class="matchFourWinner">{{ vm.tourney.matches[12].player2.nickname }}</span>
       <div class="matchSeven">
 
       </div>
-      <span class="matchFiveWinner"></span>
-      <span class="matchSixWinner"></span>
+      <span class="matchFiveWinner">{{ vm.tourney.matches[13].player1.nickname }}</span>
+      <span class="matchSixWinner">{{ vm.tourney.matches[13].player2.nickname }}</span>
       <div class="sideWinner">
 
       </div>
-      <span class="matchSevenWinner"></span>
+      <span class="matchSevenWinner">{{ vm.tourney.matches[14].player2.nickname }}</span>
     </div>
   </div>
 </div>

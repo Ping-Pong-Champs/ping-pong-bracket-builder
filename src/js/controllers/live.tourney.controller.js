@@ -4,6 +4,7 @@ function LiveTourneyController(UserService, TourneyService, $stateParams) {
   vm.players = [];
   vm.addPlayer = addPlayer;
   vm.tourney = {};
+  vm.seedBracket = seedBracket;
 
   function init(){
 
@@ -15,6 +16,13 @@ function LiveTourneyController(UserService, TourneyService, $stateParams) {
 
   }
   init();
+
+  function seedBracket () {
+    TourneyService.seedTourney(vm.tourney.id).then( response => {
+      console.log(response.data);
+      vm.matches = response.data.matches;
+    })
+  };
 
   function addPlayer (player, tourney) {
   	TourneyService.getPlayerByNickname(player).then(function(res){
