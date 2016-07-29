@@ -21,6 +21,7 @@ function LiveTourneyController(UserService, TourneyService, $stateParams) {
     TourneyService.seedTourney(vm.tourney.id).then( response => {
       console.log(response.data);
       vm.matches = response.data.matches;
+      init();
     })
   };
 
