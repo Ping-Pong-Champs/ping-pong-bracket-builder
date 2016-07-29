@@ -25,9 +25,25 @@ html{
     top: 0px;
     left: 0px;
     z-index: 1;
-    .link{
-      margin: 0px 10px;
-      text-decoration: none;
+    .logo{
+      position: absolute;
+      left: 5%;
+      width: 15%;
+      height: 90%;
+    }
+    .links{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 5%;
+      .link{
+        margin: 0px 10px;
+        text-decoration: none;
+      }
+      .create-account_button{
+        border: none;
+      }
     }
   }
 
