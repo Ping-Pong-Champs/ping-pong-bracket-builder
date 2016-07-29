@@ -5,7 +5,7 @@ function TourneyController (UserService, $state, TourneyService, $rootScope) {
 	vm.tourneyCreateShow = tourneyCreateShow;
 	vm.tourneyCreateHide = tourneyCreateHide;
 	vm.createTourney = createTourney;
-	vm.tourney = {
+	vm.tourneyShowObj = {
 		createTourney: false
 	};
 	vm.players = {};
@@ -21,22 +21,24 @@ function TourneyController (UserService, $state, TourneyService, $rootScope) {
   function init () {
     vm.loggedIn = UserService.isLoggedIn();
     TourneyService.getTourneys().then((res)=>{
-			vm.tourneys = res.data;
+    		console.log(res.data.tournaments);
+			vm.tourneys = res.data.tournaments;
 			console.log(vm.tourneys);
   	});
   };
 
 	function tourneyCreateShow(tourney){
-		vm.tourney.createTourney = true;
+		vm.tourneyShowObj.createTourney = true;
 	}
 
 	function tourneyCreateHide(tourney){
-		vm.tourney.createTourney = false;
+		vm.tourneyShowObj.createTourney = false;
 	}
 
 	function createTourney(tourney){
+		console.log(tourney);
 		TourneyService.postTourney(tourney).then( (res)=>{
-			vm.tourneys = res.data
+			init();
 		});
 	}
 

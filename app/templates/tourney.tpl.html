@@ -5,14 +5,14 @@
 			Create New Tournament
 		</div>
 	</div>
-	<div class="createFormContainer" ng-show="vm.tourney.createTourney">
-		<div class="cancelButton" ng-click="vm.tourneyCreateHide(vm.tourney)">
+	<div class="createFormContainer" ng-show="vm.tourneyShowObj.createTourney">
+		<div class="cancelButton" ng-click="vm.tourneyCreateHide(vm.tourneyShowObj)">
 			Cancel
 		</div>
 		<form ng-submit="vm.createTourney(vm.tourney)">
 			<div class="tourneyViewInput">
 				<p class="tourneyViewInputText">Tournament Name:</p>
-				<input type="text" ng-model="vm.tourney.name" required>
+				<input type="text" ng-model="vm.tourney.title" required>
 			</div>
 			<div class="tourneyViewInput">
 				<p class="tourneyViewInputText">Tournament Location:</p>
@@ -20,7 +20,7 @@
 			</div>
 			<div class="tourneyViewInput">
 				<p class="tourneyViewInputText">Tournament Start Date and Time:</p>
-				<input type="datetime-local" ng-model="vm.tourney.starting_at" required>
+				<input type="text" ng-model="vm.tourney.starting_at" placeholder="e.g. 04/10/2016, 4pm">
 			</div>
 			<div class="tourneyViewInput">
 				<p class="tourneyViewInputText">Tournament Size:</p>
@@ -131,7 +131,7 @@
 			</div>
 			<div class="tourneyViewInput">
 				<p class="tourneyViewInputText">Registration Deadline:</p>
-				<input type="datetime-local" ng-model="vm.tourney.deadline" required>
+				<input type="text" ng-model="vm.tourney.deadline" placeholder="e.g. 04/10/2016, 4pm">
 			</div>
 			<div class="tourneyViewInput">
 				<input type="submit" class="tourneyViewSubmitButton">
@@ -139,25 +139,28 @@
 		</form>
 	</div>
 	<div class="tourneysContainer" >
-		<div class="tourneyContainer" ng-repeat="tournament in tournaments" ng-click="vm.goToTourney(tourney)">
-			<div class="tourneyName tourneyData">
-				Name: {{tournament.title}}
-			</div> |
-			<div class="tourneyLocation tourneyData">
-				Location: {{tournament.location}}
-			</div> |
-			<div class="tourneyStatingAt tourneyData">
-				Starts: {{tournament.starting_at}}
-			</div> |
-			<div class="tourneySize tourneyData">
-				Size: {{tournament.size}} Players
-			</div> |
-			<div class="tourneyDeadline tourneyData">
-				Deadline: {{tournament.deadline}}
-			</div> |
-			<div class="tournamentOrganizer tourneyData">
-				Organizer: {{tournament.organizer}}
-			</div>
+
+		<div class="tourneyContainer" ng-repeat="tournament in vm.tourneys">
+			<a href="/#/live-tourney/{{tournament.id}}">
+				<div class="tourneyName tourneyData">
+					Name: {{tournament.title}}
+				</div> |
+				<div class="tourneyLocation tourneyData">
+					Location: {{tournament.location}}
+				</div> |
+				<div class="tourneyStatingAt tourneyData">
+					Starts: {{tournament.starting_at}}
+				</div> |
+				<div class="tourneySize tourneyData">
+					Size: {{tournament.size}} Players
+				</div> |
+				<div class="tourneyDeadline tourneyData">
+					Deadline: {{tournament.deadline}}
+				</div> |
+				<div class="tournamentOrganizer tourneyData">
+					Organizer: {{tournament.organizer}}
+				</div>
+			</a>
 		</div>
 	</div>
 </div>
