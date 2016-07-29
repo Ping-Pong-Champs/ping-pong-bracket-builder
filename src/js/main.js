@@ -1,9 +1,9 @@
 import angular from 'angular';
 import 'angular-ui-router';
-import 'angular-cookies'
+import 'angular-cookies';
 
 //import our server
-import { SERVER } from './utilities/server'
+import { SERVER } from './utilities/server';
 
 //import our config
 import { config } from './utilities/config';

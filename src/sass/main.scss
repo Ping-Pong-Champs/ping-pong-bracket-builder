@@ -923,12 +923,30 @@ html{
 
 
 
-.playerInputContainer{
+.liveHeader{
+  display: flex;
+  position: relative;
+  top: 20px;
+  background: #01579B;
+  margin-right: 5px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.addPlayerContainer{
   background: #01579B;
   margin-right: 5px;
   padding: 10px;
 }
 
-.tourneyViewInputText {
+.playerInputText {
+  color: white;
+}
+
+.playerListContainer{
+  margin-right: 15%;
+}
+
+.player {
   color: white;
 }
