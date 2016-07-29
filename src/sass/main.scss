@@ -261,6 +261,7 @@ html{
     height: 100%;
     position: absolute;
     top: 10%;
+
     .bracketOfEight{
       width: 90%;
       height: 70%;
@@ -874,6 +875,33 @@ html{
           text-align: center;
         }
       }
+
+
+      .addPlayerContainer{
+        background: #01579B;
+        margin-right: 5px;
+        padding: 10px;
+        .addPlayerForm{
+          .playerInputText{
+
+          }
+        }
+      }
+      .playerListContainer{
+        .player{
+
+        }
+        .playersListBox{
+          .player{
+
+          }
+        }
+      }
+      .startButton{
+        .start-game{
+          
+        }
+      }
     }
   }
 
@@ -913,11 +941,6 @@ html{
   justify-content: space-between;
 }
 
-.addPlayerContainer{
-  background: #01579B;
-  margin-right: 5px;
-  padding: 10px;
-}
 
 .playerInputText {
   color: white;
