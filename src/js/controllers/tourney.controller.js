@@ -1,7 +1,6 @@
 function TourneyController (UserService, $state, TourneyService, $rootScope) {
 
 	let vm = this;
-	vm.logOut = logOut;
   	vm.loggedIn = false;
 	vm.tourneyCreateShow = tourneyCreateShow;
 	vm.tourneyCreateHide = tourneyCreateHide;

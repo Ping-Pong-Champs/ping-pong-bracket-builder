@@ -1,4 +1,4 @@
-function TourneyService ($cookies, SERVER, UserService) {
+function TourneyService ($cookies, $http, SERVER, UserService) {
 
   this.postTourney = postTourney;
   this.getTourneys  = getTourneys;
@@ -14,5 +14,5 @@ function TourneyService ($cookies, SERVER, UserService) {
 
 }
 
-TourneyService.$inject = ['$cookies', 'SERVER', 'UserService'];
+TourneyService.$inject = ['$cookies', '$http', 'SERVER', 'UserService'];
 export { TourneyService };
