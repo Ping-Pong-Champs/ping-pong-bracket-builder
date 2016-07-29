@@ -1,4 +1,25 @@
 <div class="liveTourneyView">
+  <div class="liveHeader">
+    <div class="addPlayerContainer">
+      <form class="addPlayerForm" ng-submit="vm.addPlayer(player, vm.tourney)">
+        <p class="playerInputText">Add Player</p>
+        <p class="playerInputText">Full Name:</p>
+        <input type="text" ng-model="player.fullname">
+        <p class="playerInputText">Nickname:</p>
+        <input type="text" ng-model="player.nickname">
+        <input type="submit">
+      </form>
+    </div>
+    <div class="playerListContainer">
+      <p class="player" >Players:</p>
+      <div class="playersListBox" ng-repeat="player in vm.players">      
+        <p class="player">
+          {{player.nickname}}
+        </p>
+      </div>
+    </div>
+  </div>
+
   <div class="bracketOfEight" ng-show="vm.tourney.size == 8">
     <div class="sideOne">
       <div class="matchOne">
