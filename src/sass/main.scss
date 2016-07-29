@@ -171,8 +171,25 @@ html{
     form{
       width: 95%;
       .tourneyViewInput{
+        text-align: center;
         .tourneyViewInputText{
-          margin-bottom: 5px;
+          margin-bottom: 4px;
+        }
+        input{
+          padding: .4%;
+        }
+        .tourneyViewSubmitButton{
+          margin: 1%;
+        }
+      }
+      .playerInputs{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 60%;
+        margin: auto;
+        .playerInputContainer{
+          margin: .5%;
         }
       }
     }
@@ -798,13 +815,6 @@ html{
 }
 
 
-
-
-
-.playerInputs{
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .tourneyContainer {
   display: flex;
