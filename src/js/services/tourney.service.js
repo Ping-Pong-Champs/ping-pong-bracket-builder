@@ -25,7 +25,7 @@ function TourneyService ($cookies, $http, SERVER, UserService) {
   }
 
   function createPlayer(player){
-  	return $http.post(SERVER.URL + 'PLAYERS', player, UserService.headers());
+  	return $http.post(SERVER.URL + 'players', player, UserService.headers());
   }
 
   function addPlayerInTourney (player, tourney){
