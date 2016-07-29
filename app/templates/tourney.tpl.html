@@ -139,24 +139,24 @@
 		</form>								
 	</div>
 	<div class="tourneysContainer" >
-		<div class="tourneyContainer">
+		<div class="tourneyContainer" ng-repeat="tournament in tournaments" ng-click="vm.goToTourney(tourney)">
 			<div class="tourneyName tourneyData">
-				{{tournament.title}}
-			</div>
+				Name: {{tournament.title}}
+			</div> |
 			<div class="tourneyLocation tourneyData">
-				{{tournament.location}}
-			</div>
+				Location: {{tournament.location}}
+			</div> |
 			<div class="tourneyStatingAt tourneyData">
-				{{tournament.starting_at}}
-			</div>
+				Starts: {{tournament.starting_at}}
+			</div> |
 			<div class="tourneySize tourneyData">
-				{{tournament.size}}
-			</div>
+				Size: {{tournament.size}} Players
+			</div> |
 			<div class="tourneyDeadline tourneyData">
-				{{tournament.deadline}}
-			</div>
+				Deadline: {{tournament.deadline}}
+			</div> |
 			<div class="tournamentOrganizer tourneyData">
-				{{tournament.organizer}}
+				Organizer: {{tournament.organizer}}
 			</div>
 		</div>
 	</div>
