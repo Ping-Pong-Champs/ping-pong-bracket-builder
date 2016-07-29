@@ -40,7 +40,7 @@
 	</div>
 	<div class="tourneysContainer" >
 
-		<div class="tourneyContainer" ng-repeat="tournament in vm.tourneys">
+		<div class="tourneyContainer" ng-repeat="tournament in vm.tourneys | filter:vm.validSize">
 			<a href="/#/live-tourney/{{tournament.id}}">
 				<div class="tourneyName tourneyData">
 					Name: {{tournament.title}}
