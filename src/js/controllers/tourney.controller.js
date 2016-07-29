@@ -36,7 +36,6 @@ function TourneyController (UserService, $state, TourneyService, $rootScope) {
 	}
 
 	function createTourney(tourney){
-		console.log(tourney);
 		TourneyService.postTourney(tourney).then( (res)=>{
 			init();
 		});
